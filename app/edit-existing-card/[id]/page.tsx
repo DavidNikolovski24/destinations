@@ -128,6 +128,7 @@ const page = ({ params }: any) => {
         setUpdatedData={setUpdatedData}
         submitHandler={submitHandler}
         errorField={errorField}
+        btnInnerText="Edit"
       />
     </section>
   );

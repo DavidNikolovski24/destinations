@@ -1,3 +1,4 @@
+import { IUpdatedData } from "@/app/edit-existing-card/[id]/page";
 import baseUrl from "../api/axios";
 
 export async function getAll() {
@@ -7,4 +8,7 @@ export async function getAll() {
   } catch (error) {
     console.log(error, "error");
   }
+}
+export async function addNewCard(data: IUpdatedData) {
+  await baseUrl.post("/rest/location/add", data);
 }

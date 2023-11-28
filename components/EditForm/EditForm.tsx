@@ -4,8 +4,14 @@ interface Props {
   submitHandler: (e: any) => void;
   setUpdatedData: any;
   errorField: string;
+  btnInnerText: string;
 }
-const EditForm = ({ setUpdatedData, submitHandler, errorField }: Props) => {
+const EditForm = ({
+  setUpdatedData,
+  submitHandler,
+  errorField,
+  btnInnerText,
+}: Props) => {
   const dataSetter = (e: any) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -60,7 +66,7 @@ const EditForm = ({ setUpdatedData, submitHandler, errorField }: Props) => {
         type="submit"
         className=" w-full text-center border-2  border-slate-900 px-3 py-1 bg-slate-800 text-white hover:bg-gray-50 hover:text-slate-800"
       >
-        Edit
+        {btnInnerText}
       </button>
     </form>
   );
